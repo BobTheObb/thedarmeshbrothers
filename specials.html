@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="/darmesh.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specials | The Darmesh Brothers</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .specials-section {
+      padding: 80px 10%;
+      background: var(--bg);
+    }
+    .specials-intro {
+      text-align: center;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 60px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .special-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .special-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,122,24,0.4);
+    }
+    .special-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: #1a0f08;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+    .special-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .special-card p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .special-price {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .special-price span {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 400;
+      text-decoration: line-through;
+      margin-left: 8px;
+    }
+    .deals-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+    .section-label {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+
+<header id="navbar">
+  <div class="logo">The Darmesh Brothers</div>
+  <button class="nav-toggle">☰</button>
+  <nav class="nav-menu">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="specials.html">Specials</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+      <li><a href="location.html">Find Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <a href="booking.html" class="btn btn-primary">Book Table</a>
+</header>
+
+<section class="page-header">
+  <h1>This Week's Specials</h1>
+  <p>Fresh deals, seasonal dishes and limited-time offers.</p>
+</section>
+
+<section class="specials-section">
+
+  <p class="specials-intro">Our specials change weekly. Every dish is freshly crafted using seasonal ingredients and the brothers' latest inspiration. Don't miss out — once they're gone, they're gone.</p>
+
+  <h2 class="section-label">🍽️ Chef's Specials</h2>
+  <div class="deals-grid">
+
+    <div class="special-card">
+      <span class="special-badge">This Week</span>
+      <h3>Kerala Prawn Moilee</h3>
+      <p>Delicate king prawns simmered in a fragrant coconut milk broth with turmeric, green chillies and curry leaves. Light, aromatic and absolutely stunning.</p>
+      <div class="special-price">£16.95 <span>£19.50</span></div>
+    </div>
+
+    <div class="special-card">
+      <span class="special-badge">This Week</span>
+      <h3>Achari Lamb Chops</h3>
+      <p>Tender lamb chops marinated overnight in a tangy pickle spice blend, then charred in the tandoor. Served with mint raita and fresh salad.</p>
+      <div class="special-price">£17.50 <span>£21.00</span></div>
+    </div>
+
+    <div class="special-card">
+      <span class="special-badge">Veg Special</span>
+      <h3>Black Dal Makhani</h3>
+      <p>Black lentils slow-cooked overnight with butter and cream. Silky, rich and deeply comforting. A northern Indian classic we only do occasionally.</p>
+      <div class="special-price">£12.50 <span>£14.95</span></div>
+    </div>
+
+  </div>
+
+  <h2 class="section-label">🎉 Deals & Offers</h2>
+  <div class="deals-grid">
+
+    <div class="special-card">
+      <span class="special-badge">Mon – Thu</span>
+      <h3>Early Bird Deal</h3>
+      <p>Arrive before 7pm Monday to Thursday and get 20% off your entire food bill. Perfect for a mid-week treat without the weekend wait.</p>
+      <div class="special-price">20% Off</div>
+    </div>
+
+    <div class="special-card">
+      <span class="special-badge">Every Sunday</span>
+      <h3>Sunday Family Feast</h3>
+      <p>Feed four people for £49.95. Includes two mains, two sides, four naans, rice and papadoms. The ultimate Sunday curry session.</p>
+      <div class="special-price">£49.95 <span>£68.00</span></div>
+    </div>
+
+    <div class="special-card">
+      <span class="special-badge">Always On</span>
+      <h3>Student Discount</h3>
+      <p>Show a valid student ID and get 15% off your food bill any day of the week. Because everyone deserves a legendary curry, even on a budget.</p>
+      <div class="special-price">15% Off</div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 The Darmesh Brothers</p>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>

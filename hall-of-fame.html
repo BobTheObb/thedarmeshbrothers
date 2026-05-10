@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="/darmesh.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hall of Fame | The Darmesh Brothers</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .hof-section {
+      padding: 80px 10%;
+      background: var(--bg);
+    }
+    .hof-intro {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 60px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .challenge-box {
+      background: linear-gradient(135deg, rgba(255,122,24,0.12), rgba(255,60,60,0.08));
+      border: 1px solid rgba(255,122,24,0.35);
+      border-radius: var(--radius);
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 70px;
+    }
+    .challenge-box h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+    .challenge-box p {
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 24px;
+      line-height: 1.7;
+    }
+    .hof-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .hof-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .hof-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,122,24,0.4);
+    }
+    .hof-avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), #c45a00);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin: 0 auto 16px;
+    }
+    .hof-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+    }
+    .hof-card .hof-date {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .hof-card .hof-time {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+    .hof-card .hof-quote {
+      font-size: 0.83rem;
+      color: var(--muted);
+      font-style: italic;
+      line-height: 1.5;
+    }
+    .hof-rank {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    .hof-section .section-label {
+  margin-top: 80px;
+}
+    .rank-1 { background: rgba(255,200,0,0.15); color: #f5c842; border: 1px solid rgba(255,200,0,0.25); }
+    .rank-2 { background: rgba(200,200,200,0.1); color: #ccc; border: 1px solid rgba(200,200,200,0.2); }
+    .rank-3 { background: rgba(200,120,50,0.12); color: #cd853f; border: 1px solid rgba(200,120,50,0.22); }
+    .rank-4 { background: rgba(255,60,60,0.12); color: #ff6b6b; border: 1px solid rgba(255,60,60,0.22); }
+    .section-label {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header id="navbar">
+  <div class="logo">The Darmesh Brothers</div>
+  <button class="nav-toggle">☰</button>
+  <nav class="nav-menu">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="specials.html">Specials</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+      <li><a href="location.html">Find Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <a href="booking.html" class="btn btn-primary">Book Table</a>
+</header>
+
+<section class="page-header">
+  <h1>Hall of Fame</h1>
+  <p>Only the brave. Only the bold. Only the legendary.</p>
+</section>
+
+<section class="hof-section">
+
+  <p class="hof-intro">Think you can handle our Inferno Challenge? Finish the full Darmesh Inferno — our hottest curry, a mountain of rice and three naans — in under 20 minutes, and your name goes on the wall forever. No milk. No water. No surrender.</p>
+
+  <div class="challenge-box">
+    <h2>🔥 The Darmesh Inferno Challenge</h2>
+    <p>A mountain of our ghost pepper and scotch bonnet curry, basmati rice and 5 garlic naans. Finnish it in under 15 minutes with no dairy and you get your meal for free. Think you've got what it takes?</p>
+    <a href="booking.html" class="btn btn-primary">Book Your Attempt</a>
+  </div>
+
+  <h2 class="section-label">🏆 The Legends</h2>
+  <div class="hof-grid">
+
+    <div class="hof-card">
+      <div class="hof-avatar">🥇</div>
+      <span class="hof-rank rank-1">1st</span>
+      <h3>Jamie "The Beast" Thornton</h3>
+      <div class="hof-date">14th March 2023</div>
+      <div class="hof-time">⏱ 7 mins 42 secs</div>
+      <p class="hof-quote">"I've done hotter. Barely."</p>
+    </div>
+
+    <div class="hof-card">
+      <div class="hof-avatar">🥈</div>
+      <span class="hof-rank rank-2">2nd</span>
+      <h3>Priya Kapoor</h3>
+      <div class="hof-date">2nd August 2023</div>
+      <div class="hof-time">⏱ 8 mins 05 secs</div>
+      <p class="hof-quote">"My mum's cooking is hotter. Come at me."</p>
+    </div>
+
+    <div class="hof-card">
+      <div class="hof-avatar">🥉</div>
+      <span class="hof-rank rank-3">3rd</span>
+      <h3>Dan Whitfield</h3>
+      <div class="hof-date">19th November 2022</div>
+      <div class="hof-time">⏱ 8 mins 57 secs</div>
+      <p class="hof-quote">"Would do it again. Probably won't."</p>
+    </div>
+
+    <div class="hof-card">
+      <div class="hof-avatar">😭</div>
+      <span class="hof-rank rank-4">4th</span>
+      <h3>Callum Reed</h3>
+      <div class="hof-date">5th January 2024</div>
+      <div class="hof-time">⏱ 9 mins 45 secs</div>
+      <p class="hof-quote">"Cried a little. Worth it."</p>
+    </div>
+
+    <div class="hof-card">
+      <div class="hof-avatar">🌶️</div>
+      <span class="hof-rank rank-4">5th</span>
+      <h3>Aisha Mohammed</h3>
+      <div class="hof-date">22nd April 2024</div>
+      <div class="hof-time">⏱ 10 mins 12 secs</div>
+      <p class="hof-quote">"Absolutely unreal. Send help."</p>
+    </div>
+
+    <div class="hof-card">
+      <div class="hof-avatar">🔥</div>
+      <span class="hof-rank rank-4">6th</span>
+      <h3>Tom Gregory</h3>
+      <div class="hof-date">31st October 2023</div>
+      <div class="hof-time">⏱ 10 mins 28 secs</div>
+      <p class="hof-quote">"We trained for three weeks for this."</p>
+    </div>
+
+    <div class="hof-card">
+      <div class="hof-avatar">⚡</div>
+      <span class="hof-rank rank-4">7th</span>
+      <h3>Fatima Al-Hassan</h3>
+      <div class="hof-date">9th February 2025</div>
+      <div class="hof-time">⏱ 10 mins 55 secs</div>
+      <p class="hof-quote">"Came in for a quiet dinner. Left a legend."</p>
+    </div>
+
+    <div class="hof-card">
+      <div class="hof-avatar">💪</div>
+      <span class="hof-rank rank-4">8th</span>
+      <h3>Ryan Clarke</h3>
+      <div class="hof-date">17th July 2024</div>
+      <div class="hof-time">⏱ 11 mins 30 secs</div>
+      <p class="hof-quote">"Last ten seconds was a spiritual experience."</p>
+    </div>
+   </div> 
+
+    <h2 class="section-label">🏅 Darmesh Awards</h2>
+    <div class="hof-grid">
+
+  <div class="hof-card">
+    <div class="hof-avatar">🏆</div>
+    <span class="hof-rank rank-1">Most Visited</span>
+    <h3>Leo Condie, Henry Walker</h3>
+    <div class="hof-date">17 Visits</div>
+    <p class="hof-quote">"Pre land training meals."</p>
+  </div>
+
+  <div class="hof-card">
+    <div class="hof-avatar">👨‍🍳</div>
+    <span class="hof-rank rank-1">Co-owner</span>
+    <h3>Ravi Darmesh</h3>
+    <div class="hof-date">Head Chef</div>
+    <p class="hof-quote">"The mastermind behind every legendary dish."</p>
+  </div>
+
+  <div class="hof-card">
+    <div class="hof-avatar">🍽️</div>
+    <span class="hof-rank rank-1">Co-owner</span>
+    <h3>George Darmesh</h3>
+    <div class="hof-date">Senior Waiter</div>
+    <p class="hof-quote">"Flawless service under extreme pressure."</p>
+  </div>
+
+  <div class="hof-card">
+    <div class="hof-avatar">🍛</div>
+    <span class="hof-rank rank-1">Most Ordered</span>
+    <h3>Oliver Bennett</h3>
+    <div class="hof-date">Record Holder</div>
+    <p class="hof-quote">"Carried the entire menu on his shoulders."</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 The Darmesh Brothers</p>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>

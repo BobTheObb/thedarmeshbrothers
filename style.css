@@ -1,0 +1,321 @@
+:root {
+   --primary: #ff7a18;
+   --primary-hover: #e86100;
+ 
+   --bg: #120a05;
+   --surface: #1a0f08;
+ 
+   --text: #fff4e6;
+   --muted: rgba(255,244,230,0.7);
+ 
+   --border: rgba(255, 122, 24, 0.18);
+ 
+   --card: rgba(255,255,255,0.04);
+ 
+   --radius: 20px;
+ 
+   --shadow: 0 20px 60px rgba(0,0,0,0.6);
+ 
+   --font-heading: "Playfair Display", serif;
+   --font-body: "Poppins", sans-serif;
+ }
+ 
+ /* RESET */
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ 
+ html {
+   scroll-behavior: smooth;
+ }
+ 
+ body {
+   background: var(--bg);
+   color: var(--text);
+   font-family: var(--font-body);
+   overflow-x: hidden;
+ }
+ 
+ /* FIX SCROLL */
+ .home-page {
+   min-height: 100vh;
+ }
+ 
+ /* NAVBAR */
+ #navbar {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   height: 85px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 50px;
+   background: rgba(18,10,5,0.7);
+   backdrop-filter: blur(18px);
+   border-bottom: 1px solid var(--border);
+   z-index: 1000;
+ }
+ 
+ .logo {
+   font-family: var(--font-heading);
+   font-size: 1.7rem;
+   color: var(--primary);
+ }
+ 
+ .nav-menu {
+   display: flex;
+   align-items: center;
+ }
+ 
+ /* NAV LINK UNDERLINE GROW */
+ .nav-links {
+   display: flex;
+   list-style: none;
+   gap: 28px;
+ }
+ 
+ .nav-links a {
+   position: relative;
+   color: var(--text);
+   font-size: 0.95rem;
+   text-decoration: none;
+   padding-bottom: 4px;
+   transition: color 0.3s;
+ }
+ 
+ .nav-links a::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   background: var(--primary);
+   transform: scaleX(0);
+   transform-origin: left;
+   transition: transform 0.3s ease;
+ }
+ 
+ .nav-links a:hover::after,
+ .nav-links a.active::after {
+   transform: scaleX(1);
+ }
+ 
+ .nav-links a:hover,
+ .nav-links a.active {
+   color: var(--primary);
+ }
+ 
+ /* MOBILE TOGGLE */
+ .nav-toggle {
+   display: none;
+   font-size: 22px;
+   background: transparent;
+   border: 1px solid rgba(255,255,255,0.1);
+   color: var(--text);
+   padding: 8px 12px;
+   border-radius: 10px;
+   cursor: pointer;
+ }
+ 
+ /* BUTTONS */
+ .btn {
+   padding: 12px 26px;
+   border-radius: 999px;
+   font-weight: 600;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   transition: 0.3s;
+   text-decoration: none;
+ }
+ 
+ .btn-primary {
+   background: linear-gradient(135deg, var(--primary), #c45a00);
+   color: #1a0f08;
+ }
+ 
+ .btn-primary:hover {
+   transform: translateY(-2px);
+   background: var(--primary-hover);
+   color: white;
+ }
+ 
+ .btn-secondary {
+   background: rgba(255,255,255,0.06);
+   color: var(--text);
+ }
+ 
+ .btn-secondary:hover {
+   background: rgba(255,255,255,0.12);
+   transform: translateY(-2px);
+ }
+ 
+ .btn-outline {
+   border: 1px solid var(--primary);
+   color: var(--primary);
+   background: transparent;
+ }
+ 
+ .btn-outline:hover {
+   background: var(--primary);
+   color: #1a0f08;
+   transform: translateY(-2px);
+ }
+ 
+ /* HERO — Rich curry dish close-up */
+ .hero {
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 140px 20px 80px;
+   background:
+     linear-gradient(
+       rgba(18,10,5,0.65),
+       rgba(18,10,5,0.95)
+     ),
+     url("https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=2070&auto=format&fit=crop")
+     center/cover no-repeat;
+ }
+ 
+ .hero-content {
+   max-width: 900px;
+ }
+ 
+ .eyebrow {
+   color: var(--primary);
+   letter-spacing: 0.3em;
+   font-size: 0.8rem;
+   margin-bottom: 20px;
+   text-transform: uppercase;
+ }
+ 
+ .hero h1 {
+   font-family: var(--font-heading);
+   font-size: clamp(3rem, 7vw, 6rem);
+   margin-bottom: 20px;
+ }
+ 
+ .hero-text {
+   color: var(--muted);
+   font-size: 1.1rem;
+   margin-bottom: 35px;
+ }
+ 
+ .hero-actions {
+   display: flex;
+   gap: 15px;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ 
+ /* CONTENT SECTION */
+ .home-scroll-section {
+   padding: 120px 10%;
+   background: var(--surface);
+ }
+ 
+ .section-title {
+   font-family: var(--font-heading);
+   font-size: 2.5rem;
+   text-align: center;
+   margin-bottom: 40px;
+ }
+ 
+ /* CARDS */
+ .grid-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+   gap: 20px;
+ }
+ 
+ .info-box {
+   background: var(--card);
+   border: 1px solid var(--border);
+   padding: 30px;
+   border-radius: var(--radius);
+   box-shadow: var(--shadow);
+   transition: 0.3s;
+ }
+ 
+ .info-box:hover {
+   transform: translateY(-6px);
+   border-color: rgba(255,122,24,0.4);
+ }
+ 
+ .accent {
+   color: var(--primary);
+   font-family: var(--font-heading);
+   margin-bottom: 10px;
+ }
+ 
+ /* PAGE HEADER — Warm restaurant dining room */
+ .page-header {
+   padding: 180px 10% 90px;
+   text-align: center;
+   background:
+     linear-gradient(rgba(18,10,5,0.75), rgba(18,10,5,0.95)),
+     url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop")
+     center/cover no-repeat;
+ }
+ 
+ .page-header h1 {
+   font-family: var(--font-heading);
+   font-size: 4rem;
+   margin-bottom: 16px;
+ }
+ 
+ .page-header p {
+   color: var(--muted);
+   font-size: 1.1rem;
+ }
+ 
+ /* FOOTER */
+ footer {
+   text-align: center;
+   padding: 60px 20px;
+   border-top: 1px solid var(--border);
+   color: var(--muted);
+   background: #120a05;
+ }
+ 
+ /* MOBILE */
+ @media (max-width: 900px) {
+   #navbar {
+     padding: 0 20px;
+   }
+ 
+   .nav-toggle {
+     display: block;
+   }
+ 
+   .nav-menu {
+     display: none;
+     width: 100%;
+     position: absolute;
+     top: 85px;
+     left: 0;
+     background: rgba(18,10,5,0.97);
+     padding: 20px;
+     border-bottom: 1px solid var(--border);
+   }
+ 
+   .nav-menu.open {
+     display: block;
+   }
+ 
+   .nav-links {
+     flex-direction: column;
+     gap: 18px;
+     text-align: center;
+   }
+ 
+   .hero h1 {
+     font-size: 3rem;
+   }
+ }

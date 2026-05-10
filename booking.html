@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="/darmesh.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Table | The Darmesh Brothers</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .booking-section {
+      padding: 80px 10%;
+      background: var(--bg);
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .booking-info h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .booking-info p {
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+    .booking-note {
+      background: rgba(255,122,24,0.08);
+      border: 1px solid rgba(255,122,24,0.2);
+      border-radius: 14px;
+      padding: 20px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .booking-note strong {
+      color: var(--primary);
+    }
+    .booking-form {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px;
+    }
+    .booking-form h2 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      margin-bottom: 28px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 16px;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      transition: 0.3s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--primary);
+    }
+    .form-group select option {
+      background: #1a0f08;
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .confirmation {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .confirmation .tick {
+      font-size: 3rem;
+      margin-bottom: 16px;
+    }
+    .confirmation h3 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+    .confirmation p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    @media (max-width: 768px) {
+      .booking-section {
+        grid-template-columns: 1fr;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header id="navbar">
+  <div class="logo">The Darmesh Brothers</div>
+  <button class="nav-toggle">☰</button>
+  <nav class="nav-menu">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="specials.html">Specials</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+      <li><a href="location.html">Find Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <a href="booking.html" class="btn btn-primary">Book Table</a>
+</header>
+
+<section class="page-header">
+  <h1>Book a Table</h1>
+  <p>Reserve your spot and we'll have everything ready for you.</p>
+</section>
+
+<section class="booking-section">
+
+  <div class="booking-info">
+    <h2>Before You Book</h2>
+    <p>We take bookings for groups of all sizes. Walk-ins are always welcome too, but booking guarantees your table especially on Friday and Saturday nights.</p>
+
+    <div class="booking-note">
+      <strong>Large groups (8+)?</strong> Please call us directly on <strong>01202 456 789</strong> so we can make sure we have the right space ready for you.
+    </div>
+
+    <div class="booking-note">
+      <strong>Inferno Challenge?</strong> Select "Hall of Fame Challenge" in the special requests box and we'll make sure the timer is ready. 😈
+    </div>
+
+    <div class="booking-note">
+      <strong>Allergens?</strong> Let us know in the special requests field and our team will be in touch before your visit.
+    </div>
+  </div>
+
+  <div class="booking-form">
+    <div id="form-view">
+      <h2>Reserve Your Table</h2>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" id="fname" placeholder="John">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Smith">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="john@example.com">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="07700 900 000">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" id="booking-date">
+        </div>
+        <div class="form-group">
+          <label>Time</label>
+          <select>
+            <option value="">Select time...</option>
+            <option>4:00pm</option>
+            <option>4:30pm</option>
+            <option>5:00pm</option>
+            <option>5:30pm</option>
+            <option>6:00pm</option>
+            <option>6:30pm</option>
+            <option>7:00pm</option>
+            <option>7:30pm</option>
+            <option>8:00pm</option>
+            <option>8:30pm</option>
+            <option>9:00pm</option>
+            <option>9:30pm</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Number of Guests</label>
+        <select>
+          <option>1 guest</option>
+          <option>2 guests</option>
+          <option>3 guests</option>
+          <option>4 guests</option>
+          <option>5 guests</option>
+          <option>6 guests</option>
+          <option>7 guests</option>
+          <option>8+ guests (we'll call you)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Special Requests</label>
+        <textarea placeholder="Allergies, dietary requirements, high chair needed, Hall of Fame Challenge, birthday celebrations..."></textarea>
+      </div>
+
+      <button class="btn btn-primary" style="width:100%;" onclick="confirmBooking()">Confirm Booking</button>
+    </div>
+
+    <div class="confirmation" id="confirmation-view">
+      <div class="tick">🎉</div>
+      <h3>You're Booked In!</h3>
+      <p>We've received your reservation and you'll get a confirmation email shortly. Get ready for the best curry of your life.</p>
+      <a href="menu.html" class="btn btn-outline" style="margin-top:24px;">Browse the Menu</a>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 The Darmesh Brothers</p>
+</footer>
+
+<script src="index.js"></script>
+<script>
+  // Set minimum date to today
+  const today = new Date().toISOString().split("T")[0];
+  document.getElementById("booking-date").setAttribute("min", today);
+
+  function confirmBooking() {
+    document.getElementById("form-view").style.display = "none";
+    document.getElementById("confirmation-view").style.display = "block";
+  }
+</script>
+</body>
+</html>

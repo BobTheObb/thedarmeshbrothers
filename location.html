@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="/darmesh.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Us | The Darmesh Brothers</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .location-section {
+      padding: 80px 10%;
+      background: var(--bg);
+    }
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .location-details h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    .detail-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+      align-items: flex-start;
+    }
+    .detail-icon {
+      font-size: 1.4rem;
+      margin-top: 2px;
+    }
+    .detail-row h4 {
+      font-size: 0.85rem;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+    .detail-row p {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .map-container {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      height: 420px;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: invert(90%) hue-rotate(180deg);
+    }
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+    .hours-table td {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .hours-table td:last-child {
+      text-align: right;
+      color: var(--text);
+      font-weight: 500;
+    }
+    @media (max-width: 768px) {
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header id="navbar">
+  <div class="logo">The Darmesh Brothers</div>
+  <button class="nav-toggle">☰</button>
+  <nav class="nav-menu">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="specials.html">Specials</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+      <li><a href="location.html">Find Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <a href="booking.html" class="btn btn-primary">Book Table</a>
+</header>
+
+<section class="page-header">
+  <h1>Find Us</h1>
+  <p>We're right in the heart of Bournemouth. Come hungry.</p>
+</section>
+
+<section class="location-section">
+  <div class="location-grid">
+
+    <div class="location-details">
+      <h2>Get Here</h2>
+
+      <div class="detail-row">
+        <div class="detail-icon">📍</div>
+        <div>
+          <h4>Address</h4>
+          <p>7 Commercial Rd<br>Bournemouth<br>BH2 5LU</p>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-icon">📞</div>
+        <div>
+          <h4>Phone</h4>
+          <p>07727 340314</p>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-icon">🚗</div>
+        <div>
+          <h4>Parking</h4>
+          <p>Free parking available on Commercial Rd after 6pm. Nearest car park is BCP Bournemouth Centre, 3 mins walk.</p>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-icon">🚌</div>
+        <div>
+          <h4>Bus</h4>
+          <p>Routes 1, 6 and 13 stop directly outside. Bournemouth train station is a 10 minute walk.</p>
+        </div>
+      </div>
+
+      <table class="hours-table">
+        <tr><td>Monday – Thursday</td><td>3:30pm– 10:00pm</td></tr>
+        <tr><td>Friday – Saturday</td><td>3:30pm – 11:30pm</td></tr>
+        <tr><td>Sunday</td><td>2:00pm – 8:00pm</td></tr>
+      </table>
+    </div>
+
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2526.019259087091!2d-1.8877086237284824!3d50.719581867949785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4873a1617b6921af%3A0x35052983a477c517!2sThe%20Darmesh%20Brothers!5e0!3m2!1sen!2suk!4v1778451810352!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 The Darmesh Brothers</p>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>

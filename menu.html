@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="/darmesh.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | The Darmesh Brothers</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* MENU SECTION */
+    .menu-section {
+      padding: 80px 10%;
+      background: var(--bg);
+    }
+
+    /* TABS */
+    .menu-tabs {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+
+    .tab-btn {
+      padding: 10px 24px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .tab-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #1a0f08;
+      font-weight: 700;
+    }
+
+    /* TAB CONTENT */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* MENU GRID */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    /* MENU CARD */
+    .menu-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      transition: 0.3s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,122,24,0.4);
+    }
+
+    .menu-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+
+    .menu-card-top h3 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+
+    .price {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+
+    .menu-card p {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    /* TAGS */
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: rgba(255,255,255,0.06);
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+
+    .tag.veg {
+      background: rgba(80,200,100,0.12);
+      color: #6fcf7f;
+      border-color: rgba(80,200,100,0.2);
+    }
+
+    .tag.medium {
+      background: rgba(255,180,0,0.12);
+      color: #f5c842;
+      border-color: rgba(255,180,0,0.2);
+    }
+
+    .tag.hot {
+      background: rgba(255,60,60,0.12);
+      color: #ff6b6b;
+      border-color: rgba(255,60,60,0.2);
+    }
+
+    @media (max-width: 768px) {
+      .menu-section {
+        padding: 60px 5%;
+      }
+
+      .menu-tabs {
+        gap: 8px;
+      }
+
+      .tab-btn {
+        padding: 8px 16px;
+        font-size: 0.82rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header id="navbar">
+  <div class="logo">The Darmesh Brothers</div>
+  <button class="nav-toggle">☰</button>
+  <nav class="nav-menu">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="specials.html">Specials</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+      <li><a href="location.html">Find Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <a href="booking.html" class="btn btn-primary">Book Table</a>
+</header>
+
+<section class="page-header">
+  <h1>Our Menu</h1>
+  <p>Authentic flavours, legendary recipes, proper spice.</p>
+</section>
+
+<section class="menu-section">
+
+  <div class="menu-tabs">
+    <button class="tab-btn active" data-tab="starters">Starters</button>
+    <button class="tab-btn" data-tab="mains">Mains</button>
+    <button class="tab-btn" data-tab="breads">Breads & Rice</button>
+    <button class="tab-btn" data-tab="sides">Sides</button>
+    <button class="tab-btn" data-tab="desserts">Desserts</button>
+    <button class="tab-btn" data-tab="drinks">Drinks</button>
+  </div>
+
+  <!-- STARTERS -->
+  <div class="tab-content active" id="starters">
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Samosa (2 pcs)</h3>
+          <span class="price">£5.50</span>
+        </div>
+        <p>Crispy pastry filled with spiced potato and peas, served with mint chutney.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Chicken Tikka</h3>
+          <span class="price">£7.95</span>
+        </div>
+        <p>Tender marinated chicken cooked in the tandoor, served with salad and mint raita.</p>
+        <span class="tag">Mild</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Seekh Kebab</h3>
+          <span class="price">£7.50</span>
+        </div>
+        <p>Minced lamb blended with herbs and spices, grilled on skewers.</p>
+        <span class="tag medium">Medium</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Onion Bhaji (3 pcs)</h3>
+          <span class="price">£5.00</span>
+        </div>
+        <p>Golden fried onion fritters seasoned with cumin and coriander.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Prawn Puri</h3>
+          <span class="price">£8.50</span>
+        </div>
+        <p>Juicy king prawns in a spiced tomato sauce served on a puffed puri bread.</p>
+        <span class="tag medium">Medium</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Mixed Starter Platter</h3>
+          <span class="price">£13.95</span>
+        </div>
+        <p>A sharing platter of samosas, seekh kebab, chicken tikka and bhaji. Perfect for two.</p>
+        <span class="tag">Chef's Pick</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MAINS -->
+  <div class="tab-content" id="mains">
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Butter Chicken</h3>
+          <span class="price">£13.95</span>
+        </div>
+        <p>Succulent chicken in a velvety tomato and butter sauce. A timeless classic.</p>
+        <span class="tag">Mild</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Lamb Rogan Josh</h3>
+          <span class="price">£14.95</span>
+        </div>
+        <p>Slow-cooked tender lamb in a rich Kashmiri sauce fragrant with whole spices.</p>
+        <span class="tag medium">Medium</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Chicken Jalfrezi</h3>
+          <span class="price">£13.50</span>
+        </div>
+        <p>Stir-fried chicken with peppers, onions and green chillies in a bold tomato base.</p>
+        <span class="tag hot">Hot</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Darmesh Special Curry</h3>
+          <span class="price">£15.95</span>
+        </div>
+        <p>Our signature dish — lamb, chicken and king prawns in a house spice blend. A legend.</p>
+        <span class="tag hot">Hot 🔥</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Saag Paneer</h3>
+          <span class="price">£11.95</span>
+        </div>
+        <p>Fresh spinach and homemade paneer cheese cooked with garlic and ginger.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>King Prawn Masala</h3>
+          <span class="price">£15.50</span>
+        </div>
+        <p>Plump king prawns simmered in a lightly spiced onion and tomato masala sauce.</p>
+        <span class="tag medium">Medium</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Chana Masala</h3>
+          <span class="price">£10.95</span>
+        </div>
+        <p>Hearty chickpeas slow-cooked in a tangy, aromatic tomato and spice gravy.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Beef Vindaloo</h3>
+          <span class="price">£14.50</span>
+        </div>
+        <p>A fiery Goan-style curry with tender beef, vinegar and red chillies. Not for the faint-hearted.</p>
+        <span class="tag hot">Extra Hot 🔥🔥</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BREADS & RICE -->
+  <div class="tab-content" id="breads">
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Plain Naan</h3>
+          <span class="price">£2.95</span>
+        </div>
+        <p>Soft leavened bread baked fresh in the tandoor oven.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Garlic Naan</h3>
+          <span class="price">£3.50</span>
+        </div>
+        <p>Tandoor-baked naan brushed with garlic butter and fresh coriander.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Peshwari Naan</h3>
+          <span class="price">£3.75</span>
+        </div>
+        <p>Sweet naan stuffed with coconut, almonds and sultanas.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Paratha</h3>
+          <span class="price">£3.25</span>
+        </div>
+        <p>Flaky layered wholemeal flatbread cooked on the tawa.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Pilau Rice</h3>
+          <span class="price">£3.50</span>
+        </div>
+        <p>Fragrant basmati rice cooked with whole spices and saffron.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Egg Fried Rice</h3>
+          <span class="price">£3.75</span>
+        </div>
+        <p>Basmati rice stir-fried with egg, peas and a hint of spice.</p>
+        <span class="tag">Contains Egg</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SIDES -->
+  <div class="tab-content" id="sides">
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Tarka Dal</h3>
+          <span class="price">£4.50</span>
+        </div>
+        <p>Slow-cooked yellow lentils tempered with cumin, garlic and dried chilli.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Aloo Gobi</h3>
+          <span class="price">£4.50</span>
+        </div>
+        <p>Potato and cauliflower dry-fried with turmeric, cumin and coriander.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Raita</h3>
+          <span class="price">£2.50</span>
+        </div>
+        <p>Cool yoghurt with cucumber, mint and a pinch of cumin. Perfect to cool things down.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Mango Chutney</h3>
+          <span class="price">£1.50</span>
+        </div>
+        <p>Sweet and tangy house-made mango chutney.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Papadoms (4 pcs)</h3>
+          <span class="price">£2.00</span>
+        </div>
+        <p>Crispy lentil wafers served with a trio of chutneys.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DESSERTS -->
+  <div class="tab-content" id="desserts">
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Gulab Jamun</h3>
+          <span class="price">£4.95</span>
+        </div>
+        <p>Soft milk dumplings soaked in rose-scented sugar syrup, served warm.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Mango Kulfi</h3>
+          <span class="price">£4.50</span>
+        </div>
+        <p>Traditional Indian ice cream made with condensed milk and Alphonso mango.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Kheer</h3>
+          <span class="price">£4.50</span>
+        </div>
+        <p>Creamy rice pudding slow-cooked with cardamom, saffron and topped with pistachios.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Rasmalai</h3>
+          <span class="price">£4.95</span>
+        </div>
+        <p>Soft paneer patties soaked in chilled saffron and cardamom-infused cream.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DRINKS -->
+  <div class="tab-content" id="drinks">
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Mango Lassi</h3>
+          <span class="price">£3.95</span>
+        </div>
+        <p>Chilled blended yoghurt with sweet Alphonso mango. The perfect curry companion.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Sweet Lassi</h3>
+          <span class="price">£3.50</span>
+        </div>
+        <p>Classic chilled yoghurt drink lightly sweetened with rose water.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Masala Chai</h3>
+          <span class="price">£2.95</span>
+        </div>
+        <p>Warming spiced tea brewed with ginger, cardamom, cinnamon and whole milk.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Kingfisher Beer</h3>
+          <span class="price">£4.50</span>
+        </div>
+        <p>India's finest lager. Crisp, cold and made for curry.</p>
+        <span class="tag">Alcohol</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>House Red / White Wine</h3>
+          <span class="price">£5.50</span>
+        </div>
+        <p>A carefully selected house wine, served by the glass.</p>
+        <span class="tag">Alcohol</span>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-card-top">
+          <h3>Soft Drinks</h3>
+          <span class="price">£2.50</span>
+        </div>
+        <p>Coca-Cola, Diet Coke, Lemonade, Sparkling or Still Water.</p>
+        <span class="tag veg">Veg</span>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 The Darmesh Brothers</p>
+</footer>
+
+<script src="index.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabBtns = document.querySelectorAll(".tab-btn");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        tabBtns.forEach(b => b.classList.remove("active"));
+        tabContents.forEach(c => c.classList.remove("active"));
+        btn.classList.add("active");
+        document.getElementById(btn.dataset.tab).classList.add("active");
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
